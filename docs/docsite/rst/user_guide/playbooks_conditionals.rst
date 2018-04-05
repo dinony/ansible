@@ -69,7 +69,7 @@ decide to do something conditionally based on success or failure::
         when: result is skipped
 
 
-.. note:: both `success` and `succeeded` work (`fail`/`failed`, etc).
+.. note:: Both `success` and `succeeded` work (`fail`/`failed`, etc).
 
 
 As a reminder, to see what facts are available on a particular system, you can do the following::
@@ -82,7 +82,7 @@ Tip: Sometimes you'll get back a variable that's a string and you'll want to do 
       - shell: echo "only on Red Hat 6, derivatives, and later"
         when: ansible_os_family == "RedHat" and ansible_lsb.major_release|int >= 6
 
-.. note:: the above example requires the lsb_release package on the target host in order to return the ansible_lsb.major_release fact.
+.. note:: The above example requires the lsb_release package on the target host in order to return the ansible_lsb.major_release fact.
 
 Variables defined in the playbooks or inventory can also be used.  An example may be the execution of a task based on a variable's boolean value::
 
